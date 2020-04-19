@@ -53,6 +53,18 @@ int main()
 	//Call pointer version of linear search 
 	{
 		Timer timer("Time to linear search all values (pointers): ");
+
+		int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
+		{
+			if (linearSearch(numbers,numbers.end,search[i]))
+				found++;
+		}
+
+	
+
+		std::cout << "Found "<< found << "/"
+			<< search.size() << " values." << std::endl;
 	}
 
 	//Call binary search
@@ -67,7 +79,7 @@ int main()
 		for (size_t i = 0; i < search.size(); i++)
 		{
 			if (binarySearch(numbers.data(), 
-				number.data() + numbers.size(), search[i]))
+				numbers.data() + numbers.size(), search[i]))
 			{
 				found++;
 			}
