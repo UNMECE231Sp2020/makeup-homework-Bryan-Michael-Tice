@@ -112,7 +112,7 @@ int main()
 	{
 		Timer timer ("Time to sort array with merge sort: ");
 	
-	mergeSort(search_merge,search_merge.begin(),search_merge.end());
+	mergeSort(search_merge,0,search_merge.size()-1);
 	}
 	
 	return 0;
