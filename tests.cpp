@@ -104,11 +104,15 @@ int main()
 	//Call your bubble sort algorithm
 	{
 		Timer timer ("Time to sort array with bubble sort: ");
+
+	bubbleSort(search_bubble.data(),search_bubble.data()+search_bubble.size());
 	}
 
 	//Call your merge sort algorithm
 	{
 		Timer timer ("Time to sort array with merge sort: ");
+	
+	mergeSort(search_merge,search_merge.begin(),search_merge.end());
 	}
 	
 	return 0;
