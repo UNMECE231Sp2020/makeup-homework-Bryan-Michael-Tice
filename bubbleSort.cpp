@@ -7,7 +7,23 @@ void swap(int *x, int *y)
 	*y = temp;
 }
 
-void bubbleSort(int *begin, const int *end)
-{
-	//Use swap to exchange two values
+void bubbleSort(int *begin, const int *end){
+
+
+	int *tempHead;
+	int *nextoTempHead;
+
+	for(tempHead=begin;tempHead!=end;tempHead++){
+		
+		for(nextoTempHead=(tempHead+1); nextoTempHead!=end; nextoTempHead++) {
+		
+			if(*(nextoTempHead)>*(nextoTempHead+1)){
+			
+				swap(nextoTempHead,(nextoTempHead+1));
+
+			}
+		}
+	
+	}
+
 }
