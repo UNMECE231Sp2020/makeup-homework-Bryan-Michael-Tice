@@ -63,6 +63,18 @@ int main()
 	//Call the recursive version of binary search
     {
 		Timer timer("Time to binary search all values (Recursive): ");
+		int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
+		{
+			if (binarySearch(numbers.data(), 
+				number.data() + numbers.size(), search[i]))
+			{
+				found++;
+			}
+		}
+
+		std::cout << "Found "<< found << "/"
+			<< search.size() << " values." << std::endl;
     }
 
 	IntVector search_bubble = search;
