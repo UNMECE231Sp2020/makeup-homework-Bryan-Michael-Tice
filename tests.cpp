@@ -88,9 +88,8 @@ int main()
 		int found = 0;
 		for (size_t i = 0; i < search.size(); i++)
 		{
-			if (binarySearchRecursive(numbers.data(), 
-				numbers.data() + numbers.size(), search[i]))
-			{
+			if (binarySearchRecursive(numbers.data(),
+				numbers.data() + numbers.size(), search[i])) {
 				found++;
 			}
 		}
