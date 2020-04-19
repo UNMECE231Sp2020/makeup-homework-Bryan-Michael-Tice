@@ -105,7 +105,7 @@ int main()
 	{
 		Timer timer ("Time to sort array with bubble sort: ");
 
-	bubbleSort(search_bubble,search_bubble.size());
+		bubbleSort(search_bubble.data(),search_bubble.data() + search_bubble.size());
 	}
 
 	//Call your merge sort algorithm
