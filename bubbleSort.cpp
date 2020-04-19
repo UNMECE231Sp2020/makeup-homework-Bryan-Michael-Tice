@@ -13,9 +13,9 @@ void bubbleSort(int *begin, const int *end){
 	int *tempHead;
 	int *nextoTempHead;
 
-	for(tempHead=begin;tempHead<end;tempHead++){
+	for(tempHead=begin;tempHead<(end-1);tempHead++){
 		
-		for(nextoTempHead=(tempHead+1); nextoTempHead<end-1; nextoTempHead++) {
+		for(nextoTempHead=(tempHead+1); nextoTempHead<end; nextoTempHead++) {
 		
 			if(*(nextoTempHead)>*(nextoTempHead+1)){
 			
