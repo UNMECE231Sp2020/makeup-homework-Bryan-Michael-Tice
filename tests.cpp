@@ -57,7 +57,7 @@ int main()
 		int found = 0;
 		for (size_t i = 0; i < search.size(); i++)
 		{
-			if (linearSearch(numbers.data(),numbers.end(),search[i]))
+			if (linearSearch(numbers.data(),numbers.data()+numbers.size(),search[i]))
 				found++;
 		}
 
