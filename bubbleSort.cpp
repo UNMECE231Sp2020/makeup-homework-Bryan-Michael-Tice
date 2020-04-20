@@ -13,6 +13,7 @@ void bubbleSort(int *begin, const int *end){
 	int *tempHead;
 	int *nextoTempHead;
 
+
 	//Something is funky with your ending condition, I recommend
 	// using the != operator for you ending condition.
 		
@@ -21,8 +22,7 @@ void bubbleSort(int *begin, const int *end){
 		//The starting condition for this for loop should be the
 		// same as the previous for loop
 		//
-		for(nextoTempHead=begin+1; nextoTempHead!=tempHead-end; nextoTempHead++) {
-		
+		for(nextoTempHead=begin;nextoTempHead!=end; nextoTempHead++) {
 		
 			//This looks good
 			if(*(nextoTempHead)>*(nextoTempHead+1)){
@@ -31,6 +31,7 @@ void bubbleSort(int *begin, const int *end){
 				swap(nextoTempHead,(nextoTempHead+1));
 
 			}
+			
 		}
 	
 	}
