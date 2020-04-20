@@ -1,3 +1,4 @@
+#include <iostream>
 #include "sort.h"
 
 void swap(int *x, int *y)
@@ -14,16 +15,20 @@ void bubbleSort(int *begin, const int *end){
 	int *nextoTempHead;
 
 
-	//Something is funky with your ending condition, I recommend
-	// using the != operator for you ending condition.
-		
 	for(tempHead=begin;tempHead!=end;tempHead++){
+		std::cout << "Outer loop: " << *tempHead << std::endl;
 		
-		//The starting condition for this for loop should be the
-		// same as the previous for loop
-		//
-		for(nextoTempHead=begin;nextoTempHead!=end; nextoTempHead++) {
+		//The starting condition for this for loop should be what is 
+		// modified. I just gave you bad advice. I have set up the code
+		// so it prints data from the outer loop and the inner loop
+		// the problem is in the inner loop. The starting condition is
+		// close but it should be one less than the outer loop.
+
+		//for(nextoTempHead=begin;nextoTempHead!=end; nextoTempHead++) {
+		for(nextoTempHead=tempHead;/*<- play with this*/ nextoTempHead!=end; nextoTempHead++) {
+			std::cout << "\tInner loop: " << *nextoTempHead << std::endl;	
 		
+			/*
 			//This looks good
 			if(*(nextoTempHead)>*(nextoTempHead+1)){
 			
@@ -31,6 +36,7 @@ void bubbleSort(int *begin, const int *end){
 				swap(nextoTempHead,(nextoTempHead+1));
 
 			}
+			*/
 			
 		}
 	

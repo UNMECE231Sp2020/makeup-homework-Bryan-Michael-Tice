@@ -101,18 +101,24 @@ int main()
 	IntVector search_bubble = search;
 	IntVector search_merge = search;
 	
+	std::vector<int> test_data;
+	for(int z=10; z>-1; z--) {
+		test_data.push_back(z);
+	}
 	//Call your bubble sort algorithm
 	{
 		Timer timer ("Time to sort array with bubble sort: ");
 
-		bubbleSort(search_bubble.data(),search_bubble.data() + search_bubble.size());
+		bubbleSort(test_data.data(), test_data.data() + test_data.size());
+
+		//bubbleSort(search_bubble.data(),search_bubble.data() + search_bubble.size());
 	}
 
 	//Call your merge sort algorithm
 	{
 		Timer timer ("Time to sort array with merge sort: ");
 	
-	mergeSort(search_merge,0,search_merge.size()-1);
+		//mergeSort(search_merge, 0, search_merge.size()-1);
 	}
 	
 	return 0;
