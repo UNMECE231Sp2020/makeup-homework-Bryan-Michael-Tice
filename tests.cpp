@@ -57,8 +57,9 @@ int main()
 		int found = 0;
 		for (size_t i = 0; i < search.size(); i++)
 		{
-			if (linearSearch(numbers.data(),numbers.data()+numbers.size(),search[i]))
+			if (linearSearch(numbers.data(),numbers.data()+numbers.size(),search[i])){
 				found++;
+			}
 		}
 
 	
@@ -101,15 +102,11 @@ int main()
 	IntVector search_bubble = search;
 	IntVector search_merge = search;
 	
-/*	std::vector<int> test_data;
-	for(int z=10; z>-1; z--) {
-		test_data.push_back(z);
-	}*/
+	
 	//Call your bubble sort algorithm
 	{
 		Timer timer ("Time to sort array with bubble sort: ");
 
-	//	bubbleSort(test_data.data(), test_data.data() + test_data.size());
 
 		bubbleSort(search_bubble.data(),search_bubble.data() + search_bubble.size());
 	}
@@ -118,7 +115,6 @@ int main()
 	{
 		Timer timer ("Time to sort array with merge sort: ");
 	
-		//mergeSort(search_merge, 0, search_merge.size()-1);
 	}
 	
 	return 0;
