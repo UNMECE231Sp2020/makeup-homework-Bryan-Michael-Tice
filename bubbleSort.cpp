@@ -16,8 +16,8 @@ void bubbleSort(int *begin, const int *end){
 
 
 	for(tempHead=begin;tempHead!=end;tempHead++){
-		std::cout << "Outer loop: " << *tempHead << std::endl;
 		
+	
 
 		for(nextoTempHead=tempHead+1;/*<- play with this*/ nextoTempHead!=end; nextoTempHead++) {
 		
